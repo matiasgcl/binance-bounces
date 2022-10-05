@@ -1,12 +1,12 @@
 # binance-bounces
 
-This script will quantify and summarize several
+This script basically will compute (individually, for each coin separately) amplitude and time ellapsed for the *biggest* bounce produced on a given data range, using user-defined timeframe for the candles considered.
 
 Why this would matter?
 
-> Relative strength (time elapsed for a bounce and amplitude of the bounce).
+> You can estimate relative strength for each coin on a given data range (how much/how fast did it bounce? does it bounce faster/slower than other coins? it is lagged? etc.)
 
-Just fill the information required (follow the given examples, I never handle exceptions on my own code! sorry :-))
+Use: just fill the information asked when required (follow the given examples, I never handle exceptions on my own code! sorry :-))
 1. How many coins you want to see (at the beginning it will tell you how many are possible, your size will tell you how many you need to see).
 2. Timeframe for computations (i.e. TF for the retrieved Klines).
 3. Initial date-time for computations.
