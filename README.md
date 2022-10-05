@@ -1,21 +1,24 @@
-# binance-pair-filtering
+# binance-bounces
 
-A very simple script, made to solve a simply but boring (to verify) question: How to get a list of coins with only BTC pairs?
+This script will quantify and summarize several
 
 Why this would matter?
 
-> Once upon a time, Binance had savage pumps when they announced a stable pair (BUSD in particular) for a coin without stables (100% of time only with BTC/ETH pair).
+> Relative strength (time elapsed for a bounce and amplitude of the bounce).
 
-Based upon observation that most (all) tokens without stables pairs have a BTC one, I made this simple script which runs as follows (for the case of BTC  AND no stable pairs, the script ask you what pairs you want to filter):
+Just fill the information required (follow the given examples, I never handle exceptions on my own code! sorry :-))
+1. How many coins you want to see (at the beginning it will tell you how many are possible, your size will tell you how many you need to see).
+2. Timeframe for computations (i.e. TF for the retrieved Klines).
+3. Initial date-time for computations.
+4. Final date-time for computations.
+5. Wait for the output.
+6. Open the spreadsheet on your favorite program!
 
-1. Retrieve ALL BTC pairs.
-2. Retrieve ALL USDT pairs.
-3. Retrieve ALL BUSD pairs.
-4. Filter: From 1. eliminate pairs which are in 2.: Call this 1'; from 3. eliminate pairs which are in 2.: Call this 2'. 
-5. Finally, Eliminate from 1' pairs contained in 2'.
-6. As an extra step, filter pairs which are no longer traded in Binance.
+Some definitions for what you will see:
+1. Time Low (Open): Date-time when the candle where the bottom is captured OPENS.
+2. Time High (Close): Date-time when the candle where the peak is captured CLOSES. By definition this time is ALWAYS after the low (algorithmically, we catch the low and eliminate all the candles before, so in this way we actually capture the bounce FROM the bottom).
+3. T low - T high: The difference (measured in hours:minutes:seconds) between Time Low (Open) and Time High (Close) (>=0 by definition), the smaller the timeframe, the more precise this quantity is with respect to the exact time elapsed from bottom to peak.
 
 Example:
 
 ![Example](Example.png)
-
