@@ -19,6 +19,8 @@ Some definitions for what you will see:
 2. Time High (Close): Date-time when the candle where the peak is captured CLOSES. By definition this time is ALWAYS after the low (algorithmically, we catch the low and eliminate all the candles before, so in this way we actually capture the bounce FROM the bottom).
 3. T low - T high: The difference (measured in hours:minutes:seconds) between Time Low (Open) and Time High (Close) (>=0 by definition), the smaller the timeframe, the more precise this quantity is with respect to the exact time elapsed from bottom to peak.
 
+With respect to binance-drops, this one computes the bounce after the bottom is reached.
+
 Example:
 
 ![Example](Example.png)

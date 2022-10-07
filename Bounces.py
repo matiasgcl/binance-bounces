@@ -1,6 +1,4 @@
 # requires: python-binance, functools, numpy, openpyxl
-# To retrieve data from Binance we need an API key (read only enough)
-# public and secret key should be placed in API.data (first and second line, just the keys)
 ## Corrections-commentaries-new ideas : matiasgcl@protonmail.com
 ## Was this script useful?
 ## spread the love: Ethereum erc20: 0xDc3d1a7566a536CFbcaAeb0CD2a179d78062B4b6
